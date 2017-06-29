@@ -10,6 +10,7 @@ body {
 
 body {
     .body-font;
+    min-width: 320px;
 }
 
 a {
@@ -55,6 +56,13 @@ p {
     .transition-all;
     .heading-font;
     .navbar-header .navbar-brand {
+        text-transform: uppercase;
+        font-size: 11px;
+        img{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
         .heading-font;
         color: darken(@theme-primary, 50%);
         &:hover,
@@ -97,9 +105,17 @@ p {
         border-color: transparent;
         .navbar-header .navbar-brand {
             color: fade(white, 70%);
+            padding: 5px;
+            .alt-font;
+            font-size: 12px;
             &:hover,
             &:focus {
                 color: white;
+            }
+            img{
+                display: inline-block;
+                width: 40px;
+                height: 40px;
             }
         }
         .nav > li > a,
@@ -110,6 +126,7 @@ p {
             }
         }
         &.affix {
+            .transition-all();
             background-color: white;
             border-color: fade(@gray-darker, 10%);
             .navbar-header .navbar-brand {
@@ -142,7 +159,7 @@ header {
     color: white;
     .header-bg-color{
         background: rgba(121, 49, 110, 0.8);;;
-        background: linear-gradient(to bottom, rgba(121, 49, 110, 0.8) 0%,rgba(31, 38, 83, 0.8) 100%);
+        background: linear-gradient(to top, rgba(30, 44, 84, 0.7) 0%, rgba(239, 139, 55, 0.7) 100%);
         min-height: 480px;
     }
     .header-content {
@@ -213,6 +230,18 @@ header {
     }
 }
 
+header.dev-header{
+    height: 100%;
+    background: url("../img/bg-pattern.png");
+    .header-bg-color-d{
+        height: 100%;
+        padding-top: 100px;
+    }
+    p, ul, ol{
+        font-size: 18px;
+    }
+}
+
 // Sections
 
 section {
@@ -222,40 +251,13 @@ section {
     }
 }
 
-section.developers {
-    padding: 150px 0;
-    position: relative;
-    .section-heading, p{
-        color: darken(@theme-primary, 60%);
-    }
-    h2 {
-        margin-top: 0;
-        font-size: 50px;
-    }
-    .badges {
-        .badge-link {
-            display: block;
-            margin-bottom: 25px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-            img {
-                height: 60px;
-            }
-            @media(min-width: 768px) {
-                display: inline-block;
-                margin-bottom: 0;
-            }
-        }
-    }
-    @media(min-width: 768px) {
-        h2 {
-            font-size: 70px;
-        }
-    }
-}
 
-section.features {
+section.started {
+
+    min-height: 700px;
+    background-image: url(../img/get-started.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     .section-heading {
         h2 {
             margin-top: 0;
@@ -304,6 +306,10 @@ section.cta {
     background-position: center;
     background-image: url('../img/bg-cta.jpg');
     padding: 250px 0;
+    .text-sc{
+        color: white;
+        margin-top: 30px;
+    }
     .cta-content {
         position: relative;
         z-index: 1;
@@ -330,9 +336,17 @@ section.cta {
     }
 }
 
-section.contact {
+section.contact-form {
     text-align: center;        
-    background-color: #2c2e3d;
+    background-color: white;
+    background-image: url(../img/contact-form-bg.jpg);
+    background-size: 50$;
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    @media(max-width: 767px){
+        background-image: none;
+    }
     h2 {
         margin-top: 0;
         margin-bottom: 25px;
@@ -341,46 +355,12 @@ section.contact {
             color: @brand-google-plus;
         }
     }
-    ul.list-social {
-        margin: 40px 0 0;
-        li {
-            a {
-                display: block;
-                height: 60px;
-                width: 60px;
-                line-height: 60px;
-                font-size: 30px;
-                border-radius: 100%;
-                color: white;
-            }
-            &.social-twitter {
-                a {
-                    background-color: @brand-twitter;
-                    &:hover {
-                        background-color: darken(@brand-twitter, 5%);
-                    }
-                }
-            }
-            &.social-facebook {
-                a {
-                    background-color: @brand-facebook;
-                    &:hover {
-                        background-color: darken(@brand-facebook, 5%);
-                    }
-                }
-            }
-            &.social-google-plus {
-                a {
-                    background-color: @brand-google-plus;
-                    &:hover {
-                        background-color: darken(@brand-google-plus, 5%);
-                    }
-                }
-            }
-        }
-    }
     .section-heading {
-        color: white;
+        color: inherit;
+    }
+    .ver-padding{
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
     .form-group {
         margin-bottom: 25px;
@@ -395,6 +375,10 @@ section.contact {
             height: 236px;
         }
     }
+    .form-control {
+        border: 1px solid #aaa;
+        border-radius: 0px;
+    }
     .form-control:focus {
         border-color: @theme-primary;
         box-shadow: none;
@@ -402,22 +386,89 @@ section.contact {
     ::-webkit-input-placeholder {
        .heading-font;
        font-weight: 700;
-       color: @gray-lighter;
+       color: @gray-light;
     }
     :-moz-placeholder { /* Firefox 18- */
        .heading-font;
        font-weight: 700;
-       color: @gray-lighter;
+       color: @gray-light;
     }
     ::-moz-placeholder {  /* Firefox 19+ */
        .heading-font;
        font-weight: 700;
-       color: @gray-lighter;
+       color: @gray-light;
     }
     :-ms-input-placeholder {  
        .heading-font;
        font-weight: 700;
-       color: @gray-lighter;
+       color: @gray-light;
+    }
+    .text-danger {
+        color: @theme-danger;
+    }
+}
+section.contact-form-developers{
+    text-align: center;        
+    background-color: white;
+    min-height: 700px;
+    @media(max-width: 767px){
+        background-image: none;
+    }
+    h2 {
+        margin-top: 0;
+        margin-bottom: 25px;
+
+        i {
+            color: @brand-google-plus;
+        }
+    }
+    .section-heading {
+        color: inherit;
+    }
+    .ver-padding{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 25px;
+        input,
+        textarea {
+            padding: 20px;
+        }
+        input.form-control {
+            height: auto;
+        }
+        textarea.form-control {
+            height: 236px;
+        }
+    }
+    .form-control {
+        border: 1px solid #aaa;
+        border-radius: 0px;
+    }
+    .form-control:focus {
+        border-color: @theme-primary;
+        box-shadow: none;
+    }
+    ::-webkit-input-placeholder {
+       .heading-font;
+       font-weight: 700;
+       color: @gray-light;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+       .heading-font;
+       font-weight: 700;
+       color: @gray-light;
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+       .heading-font;
+       font-weight: 700;
+       color: @gray-light;
+    }
+    :-ms-input-placeholder {  
+       .heading-font;
+       font-weight: 700;
+       color: @gray-light;
     }
     .text-danger {
         color: @theme-danger;

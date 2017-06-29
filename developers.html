@@ -55,16 +55,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="#page-top">Home</a>
+                    <a class="page-scroll" href="index.html#developers">Home</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#started">Get Started</a>
                 </li>                
+<!--            <li>
+                    <a class="page-scroll" href="">Developers</a>
+                </li> -->
                 <li>
-                    <a class="page-scroll" href="developers.html">Developers</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact us</a>
+                    <a class="page-scroll" href="index.html#contact">Contact us</a>
                 </li>
             </ul>
         </div>
@@ -73,46 +73,37 @@
     <!-- /.container-fluid -->
 </nav>
 
-<header>
-    <div class="header-bg-color">
+<header class="dev-header">
+    <div class="header-bg-color header-bg-color-d">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="header-content">
-                        <div class="header-content-inner">
-                            <h1>Smartrcommerce!</h1>
-                            <h2>Ultimate smarter multi-purpose platform</h2>
-                            <a href="#started" class="btn btn-outline btn-xl page-scroll">Start Now for Free!</a>
-                        </div>
-                    </div>
+                <div class="col-xs-12 col-sm-10 col-md-8 col-lg-7">
+                    <p>Hey all you amazing web developers and agencies... did you know you can make a ton of passive income by using our SmartrCommerce payment solution? And you have to do absolutely nothing different? Crazy right?</p>
+
+                    <p>As long as you are familiar with using an Authorize gateway, you can use our custom API and transaction keys - all of which are hooked up to our Real-Time closed-loop, Empire tracking system.</p>
+
+                    <h3>Here is how it works in a few easy steps:</h3>
+
+                    <ol>
+                        <li>Fill out the partner form below - and we will provide you with a custom tracking dashboard.</li>
+                        <li>When building your customer's eCommerce website or app, you will hookup your transaction keys which are provided inside your dashboard - and provide us with a little customer information, as well as send us the website file of the completed website.</li>
+                        <li>We will contact your customer, provide them with a dashboard to track their sales and transactions, and make them a live user in your dashboard and on our servers.</li>
+                        <li>All that is left is pointing their domain to their new specified sub-domains on our server - just like a ClickBank or WordPress site. And that's it!</li>
+                    </ol>
+
+                    <p>From this point on, you are making a fraction of each and every transaction that goes through their website. They pay nothing extra, you do nothing extra! Simple right?</p>
+
+                    <p>Whether you are a lone developer or an agency of developers, just fill out the Registration Form below, and we will contact you within 24 hours to give you access to your tracking dashboard. Finally, you can be rewarded with passive income for doing something you were doing already! </p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 col-sm-10 col-md-8 col-lg-7">
+                    <a href="index.html#contact-form" class="btn btn-outline btn-xl page-scroll">Let's Get Started!</a>
                 </div>
             </div>
         </div>
     </div>
 </header>
-
-<section id="started" class="started">
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <div class="section-heading">
-                <h2>Get started</h2>
-                <hr>
-            </div>
-        </div>
-        
-        <div class="col-xs-12">
-            <p>referring people to the site</p>
-        </div>
-    </div>
-    <div class="row">
-            <div class="col-md-12">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact-form" class="contact-form">
+<section id="contact-form" class="contact-form-developers">
     <div class="container">
         <div class="row">
             <div class="col-sm-8 col-md-6" text-center">
@@ -124,7 +115,7 @@
                 <form name="sentMessage" id="contactForm" novalidate>
                         <div class=" ver-padding">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your First and Last Name*" id="name" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Name of developer or agency *" id="name" required data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
@@ -134,7 +125,18 @@
                             <div class="form-group">
                                 <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
                                 <p class="help-block text-danger"></p>
-                            </div>                        
+                            </div>  
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Website *" id="phone" required data-validation-required-message="Please enter your website url.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">  
+                                <div class="checkbox">
+                                    <label>
+                                          <input type="checkbox">Are you based in the U.S. or overseas?
+                                    </label>
+                                </div> 
+                            </div>                      
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
                                 <button type="submit" class="btn btn-xl">Send Message</button>
@@ -145,26 +147,6 @@
         </div>
     </div>
 </section>
-
-<!-- Contact Section -->
-<section id="contact" class="cta">
-    <div class="cta-content">
-        <div class="container">
-            <div class="col-xs-12">
-                <h2>Stop waiting.<br>Start earing.</h2>
-                <a href="#started" class="btn btn-outline btn-xl page-scroll">Let's Get Started!</a>
-            </div>
-            <div class="text-sc col-xs-12 col-sm-10 col-md-8 col-lg-7">
-                <p>Smartr Commerce is the world's first and only electronic processing and payment solution with a proprietary, multi-tiered, REAL-TIME affiliate tracking system.</p>
-                <p>What does this mean for you? You can refer your friends and family members to SmartrCommerce, we hook up to their website or app, and you get paid every single time a transaction is made from one of their customers! Simple! While all of these other providers require setup fees, monthly surcharges, and credit checks, we just connect our API, and everyone gets paid! </p>
-                <p>How? We charge the same 3% plus .35 cents per transaction that most all providers do, except while those other guys are pocketing that 3%, we share it with you.</p>
-                <p>If you are interested in partnering with SmartrCommerce for your business, or just referring us new clients, fill out the form below and we will get you setup with your custom dashboard for tracking your earnings!</p>
-            </div>
-        </div>
-    </div>
-    <div class="overlay"></div>
-</section>
-
 <footer>
     <div class="container">
         <p>&copy; 2017 Smartrcommerce. All Rights Reserved.</p>
